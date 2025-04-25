@@ -80,7 +80,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V5-ndk.so'),
     ('vendor/lib/vendor.mediatek.hardware.pq_aidl-V1-ndk.so', 'vendor/lib/vendor.mediatek.hardware.pq_aidl-V2-ndk.so', 'vendor/lib/vendor.mediatek.hardware.pq_aidl-V3-ndk.so',
     'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V1-ndk.so', 'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so', 'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V3-ndk.so'): blob_fixup()
-        .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V5-ndk.so'),
+        .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V6-ndk.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
