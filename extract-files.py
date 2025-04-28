@@ -81,6 +81,8 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/lib/vendor.mediatek.hardware.pq_aidl-V1-ndk.so', 'vendor/lib/vendor.mediatek.hardware.pq_aidl-V2-ndk.so', 'vendor/lib/vendor.mediatek.hardware.pq_aidl-V3-ndk.so',
     'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V1-ndk.so', 'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V2-ndk.so', 'vendor/lib64/vendor.mediatek.hardware.pq_aidl-V3-ndk.so'): blob_fixup()
         .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V6-ndk.so'),
+    ('odm/lib64/nfc_nci.thn31nfc.tms.so', 'odm/lib64/nfc_nci.nqx.default.hw.so', 'odm/lib64/tms-utils.so'): blob_fixup()
+        .add_needed('libbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
