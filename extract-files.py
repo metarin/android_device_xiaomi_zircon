@@ -83,6 +83,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V6-ndk.so'),
     ('odm/lib64/nfc_nci.thn31nfc.tms.so', 'odm/lib64/nfc_nci.nqx.default.hw.so', 'odm/lib64/tms-utils.so'): blob_fixup()
         .add_needed('libbase_shim.so'),
+    ('vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so') : blob_fixup()
+        .add_needed('libbase_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
