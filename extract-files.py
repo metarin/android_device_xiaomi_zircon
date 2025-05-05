@@ -87,6 +87,11 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libbase_shim.so'),
     'vendor/lib64/hw/hwcomposer.mtk_common.so': blob_fixup()
         .add_needed('libprocessgroup_shim.so'),
+    'vendor/lib64/libmialgoengine.so': blob_fixup()
+        .add_needed('libprocessgroup_shim.so'),
+    ('vendor/lib64/mt6886/lib3a.af.assist.so', 'vendor/lib64/mt6886/libcam.hal3a.ctrl.so', 'vendor/lib64/mt6886/libcam.hal3a.so',
+    'vendor/lib64/mt6886/libmtkcam_cputrack.so', 'vendor/lib64/mt6886/libmtkcam_request_requlator.so'): blob_fixup()
+        .add_needed('libprocessgroup_shim.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
